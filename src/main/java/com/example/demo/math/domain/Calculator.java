@@ -21,11 +21,16 @@ public class Calculator {
         return this.num2;
     }
     // opcode Set
-    public void Opcode(String opcode){
+    public void setOpcode(String opcode){
         this.opcode = opcode;
     }
     // opcode Get
     public String getOpcode(){
         return this.opcode;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%d + %d = %d", num1, num2, opcode);
     }
 }
