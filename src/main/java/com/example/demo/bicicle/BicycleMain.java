@@ -1,4 +1,4 @@
-package com.example.demo.dog;
+package com.example.demo.bicicle;
 
 import java.util.Scanner;
 
