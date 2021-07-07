@@ -1,7 +1,6 @@
 :loop
 	:: Navigate to the directory you wish to push to GitHub
-	::Change <path> as needed. Eg. C:\Users\pookie\Desktop\Writings
-	cd C:\Users\jhpark\Documents\GitHub\Docker
+	::Change <path> as needed. Eg. C:\Users\JS_KIM\workspace
 
 	::Initialize GitHub
 	git init
