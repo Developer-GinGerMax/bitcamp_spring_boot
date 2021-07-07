@@ -1,3 +1,5 @@
+package com.example.demo._0706;
+
 public class OneTen
 {
     public static void main(String[] args)

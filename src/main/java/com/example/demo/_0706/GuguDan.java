@@ -1,3 +1,5 @@
+package com.example.demo._0706;
+
 public class GuguDan
 {
     public static void main(String[] args)
