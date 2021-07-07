@@ -47,7 +47,6 @@ class Dog{
         return String.format ("이름은 %s, 색은 %s, 품종은 %s, 배고픔은 %s 임다",name,color,bread,hungry);
     }
 }
-
 public class DogMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
