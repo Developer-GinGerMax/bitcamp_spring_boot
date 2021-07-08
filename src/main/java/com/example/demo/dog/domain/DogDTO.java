@@ -1,6 +1,6 @@
 package com.example.demo.dog.domain;
 
-public class Dog {
+public class DogDTO {
     // Dog
     private String name;
     private String color;

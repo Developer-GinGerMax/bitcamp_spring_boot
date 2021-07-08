@@ -1,11 +1,11 @@
 package com.example.demo.bicicle.controller;
-import com.example.demo.bicicle.domain.Bicycle;
+import com.example.demo.bicicle.domain.BicycleDTO;
 import java.util.Scanner;
 
 public class BicycleController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Bicycle bicycle = new Bicycle();
+        BicycleDTO bicycle = new BicycleDTO();
         System.out.println("기어는?");
         bicycle.setGear(scanner.nextInt());
         System.out.println("브랜드는?");
