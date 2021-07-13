@@ -12,10 +12,14 @@ import java.util.ArrayList;
 public class DogController {
 
     private final DogService dogService;
-    private final ArrayList<DogDTO> dogs;
+
 
     public void addDog(DogDTO dog){
         dogs.add(dog);
+    }
+
+    public void showDogs(){
+        System.out.println(dogs);
     }
 
     public String barking(String bark) {

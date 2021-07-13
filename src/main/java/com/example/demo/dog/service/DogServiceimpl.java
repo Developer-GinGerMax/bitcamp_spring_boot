@@ -1,13 +1,14 @@
 package com.example.demo.dog.service;
 
 import com.example.demo.dog.domain.DogDTO;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+
 @Service
-@RequiredArgsConstructor
 public class DogServiceimpl implements DogService {
-    private final DogDTO dog;
+    private DogDTO dog;
+    private ArrayList<DogDTO> dogs;
 
     @Override
     public String barking(String bark) {
