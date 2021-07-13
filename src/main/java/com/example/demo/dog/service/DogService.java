@@ -1,7 +1,6 @@
 package com.example.demo.dog.service;
 
 import com.example.demo.dog.domain.DogDTO;
-
 import java.util.List;
 
 // barking, fetching, wagging tail

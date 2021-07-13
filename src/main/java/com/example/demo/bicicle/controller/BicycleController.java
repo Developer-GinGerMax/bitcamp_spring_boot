@@ -1,31 +1,35 @@
 package com.example.demo.bicicle.controller;
+
 import com.example.demo.bicicle.domain.BicycleDTO;
 import com.example.demo.bicicle.service.BicycleService;
 import com.example.demo.bicicle.service.BicycleServiceImpl;
-
+import org.springframework.stereotype.Controller;
 import java.util.Scanner;
 
+@Controller
 public class BicycleController {
-
     private BicycleService bicycleService;
-    private BicycleDTO bicycle;
-    private Scanner scanner;
-
-
     public BicycleController(){
-        this.bicycleService = new BicycleServiceImpl();
-        this.bicycle = new BicycleDTO();
-        this.scanner = new Scanner(System.in);
+        bicycleService = new BicycleServiceImpl();
     }
-    public void main() {
-        Scanner scanner = new Scanner(System.in);
-        BicycleDTO bicycle = new BicycleDTO();
-        System.out.println("기어는? 몇단입니까");
-        bicycle.setGear(scanner.nextInt());
-        System.out.println("브랜드는?");
-        bicycle.setBrand(scanner.next());
-        System.out.println("속도는?");
-        bicycle.setSpeed(scanner.nextInt());
-        System.out.printf("기어는 %d , 브랜드는 %s , 속도는 %d 임다.",bicycle.getGear(),bicycle.getBrand(),bicycle.getSpeed());
+
+    public void add(BicycleDTO bicycle){
+        bicycleService.add(bicycle);
+    }
+    public int count(){
+        return bicycleService.count();
+    }
+    public void show(){
+        System.out.println("자전거의 수 : "+bicycleService.count());
+        System.out.println(bicycleService.show());
+    }
+    public String changingGear(String change){
+        return bicycleService.changingGear(change);
+    }
+    public String changingPedalCadence(String cadence){
+        return bicycleService.changingPedalCadence(cadence);
+    }
+    public String applyingBreaks(String brake){
+        return bicycleService.applyingBreaks(brake);
     }
 }
