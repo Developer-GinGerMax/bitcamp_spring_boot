@@ -5,7 +5,6 @@ import com.example.demo.dog.service.DogService;
 import com.example.demo.dog.service.DogServiceImpl;
 import org.springframework.stereotype.Controller;
 
-
 @Controller
 public class DogController{
     private DogService dogService;

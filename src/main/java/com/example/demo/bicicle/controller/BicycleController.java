@@ -4,7 +4,6 @@ import com.example.demo.bicicle.domain.BicycleDTO;
 import com.example.demo.bicicle.service.BicycleService;
 import com.example.demo.bicicle.service.BicycleServiceImpl;
 import org.springframework.stereotype.Controller;
-import java.util.Scanner;
 
 @Controller
 public class BicycleController {
@@ -12,7 +11,6 @@ public class BicycleController {
     public BicycleController(){
         bicycleService = new BicycleServiceImpl();
     }
-
     public void add(BicycleDTO bicycle){
         bicycleService.add(bicycle);
     }
