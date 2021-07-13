@@ -1,12 +1,26 @@
 package com.example.demo.bicicle.controller;
 import com.example.demo.bicicle.domain.BicycleDTO;
+import com.example.demo.bicicle.service.BicycleService;
+import com.example.demo.bicicle.service.BicycleServiceImpl;
+
 import java.util.Scanner;
 
 public class BicycleController {
-    public static void main(String[] args) {
+
+    private BicycleService bicycleService;
+    private BicycleDTO bicycle;
+    private Scanner scanner;
+
+
+    public BicycleController(){
+        this.bicycleService = new BicycleServiceImpl();
+        this.bicycle = new BicycleDTO();
+        this.scanner = new Scanner(System.in);
+    }
+    public void main() {
         Scanner scanner = new Scanner(System.in);
         BicycleDTO bicycle = new BicycleDTO();
-        System.out.println("기어는?");
+        System.out.println("기어는? 몇단입니까");
         bicycle.setGear(scanner.nextInt());
         System.out.println("브랜드는?");
         bicycle.setBrand(scanner.next());
