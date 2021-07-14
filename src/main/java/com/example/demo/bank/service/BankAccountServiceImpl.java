@@ -3,11 +3,18 @@ package com.example.demo.bank.service;
 import com.example.demo.bank.domain.BankAccountDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class BankAccountServiceImpl implements BankAccountService{
-    @Autowired private BankAccountDTO bankAccount;
-    @Autowired private BankAccountDTO bankAccounts;
+    private BankAccountDTO bankAccount;
+    private List<BankAccountDTO> bankAccounts;
+
+    public BankAccountServiceImpl(){
+        bankAccount = new BankAccountDTO();
+        bankAccounts = new ArrayList<>();
+    }
 
     @Override
     public void creatAccount(BankAccountDTO bank) {
@@ -15,7 +22,6 @@ public class BankAccountServiceImpl implements BankAccountService{
         String randomNumber = "";
         Random rand = new Random();
         System.out.println(rand.nextInt(1000000000));
-
     }
 
     @Override

@@ -8,7 +8,8 @@ import java.util.List;
 @Service
 public class DogServiceImpl implements DogService{
     private DogDTO dog;
-    private ArrayList<DogDTO> dogs;
+    private List<DogDTO> dogs;
+
     public DogServiceImpl(){
         dog = new DogDTO();
         dogs = new ArrayList<>();
@@ -22,7 +23,7 @@ public class DogServiceImpl implements DogService{
         return dogs.size();
     }
     @Override
-    public List<DogDTO> show() {
+    public List<?> show() {
         return dogs;
     }
     @Override
